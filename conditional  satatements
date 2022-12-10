@@ -1,0 +1,191 @@
+Conditional Statements in Python 
+Like every other programming language, Python also has some predefined conditional statements. A conditional statement as the name suggests itself, is used to handle conditions in your program. These statements guide the program while making decisions based on the conditions encountered by the program.
+
+Python has 3 key Conditional Statements that you should know:
+
+if statement
+if-else statement
+if-elif-else ladder
+Let’s discuss each of them in detail.
+
+if Statement:
+The if statement is a conditional statement in python, that is used to determine whether a block of code will be executed or not. Meaning if the program finds the condition defined in the if statement to be true, it will go ahead and execute the code block inside the if statement.
+
+Syntax:
+
+if condition:
+        # execute code block
+To better understand this take a look at the below example.
+
+Python Example: Python program to check if a number is odd or even.
+
+# list of numbers
+list_of_numbers = [2,4,6,9,5]
+ 
+# for loop to iterate through
+# the list and check each
+# elements of the list
+for i in list_of_numbers:
+ 
+        # check if no. is odd
+        if i%2!=0:
+ 
+                # if condition is True print "odd"
+                print(i,"is an odd number")
+ 
+        # check if no. is even
+        if i%2==0:
+ 
+                # if condition is false print "even"
+                print(i,"is an even number")
+Output:
+
+2 is an even number
+4 is an even number
+6 is an even number
+9 is an odd number
+5 is an odd number
+if-else Statement:
+As discussed above, the if statement executes the code block when the condition is true. Similarly, the else statement works in conjuncture with the if statement to execute a code block when the defined if condition is false.
+
+Syntax:
+
+Syntax:
+if condition:
+        # execute code if condition is true
+else:
+        # execute code if condition if False
+Now let’s expand this concept on the previous example.
+
+Python Example: Python program to check if a number is odd or even.
+
+# list of numbers
+list_of_numbers = [2,4,6,9,5]
+ 
+# for loop to iterate through
+# the list and check each
+# element of the list
+for i in list_of_numbers:
+ 
+        # check if no. is odd
+        if i%2!=0:
+ 
+                # if condition is True print "odd"
+                print(i, "is an odd number")
+ 
+        # if the no. is not odd
+        # then the no. is even
+        # therfore print "even"
+        else:
+ 
+                # if condition is True print "even"
+                print(i, "is an even number")
+Output:
+
+2 is an even number
+4 is an even number
+6 is an even number
+9 is an odd number
+5 is an odd number
+if-elif-else ladder:
+The elif statement is used to check for multiple conditions and execute the code block within if any of the conditions evaluate to be true.
+
+The elif statement is similar to the else statement in the context that it is optional but unlike the else statement, there can be multiple elif statements in a code block following an if statement.
+
+if condition1:
+    # execute this statement
+elif condition2:
+    # execute this statement
+.
+.
+else:
+    # if non of the above conditions
+    # evaluate to True
+    # execute this statement
+Take a look at the below example for context.
+
+Python Example: Python program to check if a string matches the condition.
+
+# take a sample string
+string ="Naukri"
+ 
+# check if value in the string variable
+# matches "Nakri"
+if string == "Nakri":
+    print ("The first condition is true")
+ 
+# check if value in the string variable
+# matches "Nauri"
+elif string == "Nauri":
+    print("The second condition is true")
+ 
+# check if value in the string variable
+# matches "aukri"
+elif string == "aukri":
+    print("The third condition is true")
+ 
+# check if value in the string variable
+# matches "Naukri"
+elif string=="Naukri":
+    print("The fourth condition is true")
+ 
+# if none of the above
+# conditions evaluate to true
+# execute the code inside the else block
+else:
+    print ("All the above conditions are false")
+Output:
+
+The fourth condition is true
+
+Nested if Statements:
+A nested if statement is considered as if within another if statement(s).  These are generally used to check for multiple conditions.
+
+Syntax:
+
+if condition1:
+        if condition2:
+                # execute code if both condition1
+                # and condition2 are True
+Take a look at the below example for a better understanding of nested if statements.
+
+Python Example: Python program to check if a number is odd and divisible by 3.
+
+# list of numbers
+list_of_numbers = [4,5,9,17,21]
+ 
+# for loop to iterate through
+# the list and check each
+# element of the list
+for i in list_of_numbers:
+ 
+    # condition1: check if no. is odd
+    # if yes execute the code block inside
+    # the first if statement
+    if i%2!=0:
+ 
+        # condition2: check if no. is
+        # also divisible by 3.
+        if i%3==0:
+ 
+            # if condition2 is true
+            # execute the below code block
+            print (i,"is an odd number & divisible by 3")
+ 
+        # if codition2 if False
+        # execute the below code block
+ 
+        else:
+            print (i, "is an odd number but not divisible by 3")
+ 
+    # if condition1 is False
+    # execute the below code block
+    else:
+        print(i,"is an even number")
+Output:
+
+4 is an even number
+5 is an odd number but not divisible by 3
+9 is an odd number & divisible by 3
+17 is an odd number but not divisible by 3
+21 is an odd number & divisible by 3
